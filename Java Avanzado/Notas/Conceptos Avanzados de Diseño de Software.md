@@ -1,78 +1,121 @@
-Vas a rescribir estas notas de una mejor formay ordendar los campos de todo en formato markdonw y me lod aras en un .md para yo copaiur y pegar
+# Diseño de Software
 
-Notas a continaucion:
+El **diseño de software** es el proceso de planificar y crear una solución técnica para un problema específico a través de la estructura de un sistema o aplicación. El objetivo es transformar una idea o requerimiento del cliente en una aplicación funcional que sea mantenible, escalable y flexible. 
 
-Que es el diseño de software?
-Es el proceso de planificar la creacion de una apliacaicon o sistema.
+El diseño de software implica desde la creación de una arquitectura general hasta la estructura de cada módulo o componente del sistema. Es esencial comprender cómo las decisiones de diseño afectan el ciclo de vida del software y su evolución.
 
-En este caso la placiaciones que podasmo crear , lacs aplcaiscisones es importante ver como va evolucionando y como cambia esta
+## ¿Por qué es importante el buen diseño?
 
-para que un porograma no se degrade se trata de que identifiquemos las mejores formas de verificacion para que entendamos com fuinciaonara nuestrea aplaicaion de la mejor manera, que esto no afecte de ninguna manera inestable o afectada
-No solo es l aarquitectura de la apliacacion si no que trata especificamente tambien con codigo relaciando con codigo
+Un buen diseño de software tiene un impacto directo en la eficiencia, el mantenimiento y la escalabilidad del sistema. Las razones por las cuales el diseño es crítico son:
 
-Por que es importnate el buen diuselño?
+- **Mantenibilidad:** Un buen diseño facilita que el software sea modificado y adaptado a lo largo del tiempo sin introducir nuevos errores. Un sistema bien diseñado es más fácil de corregir y actualizar.
+  
+- **Escalabilidad:** El diseño debe permitir que el sistema crezca en términos de usuarios, volumen de datos, o funcionalidades sin afectar el rendimiento o la estabilidad.
+  
+- **Flexibilidad:** Un sistema flexible puede adaptarse a nuevos requerimientos o cambios sin tener que reescribir grandes partes del código.
+  
+- **Rendimiento:** El diseño adecuado optimiza el uso de los recursos del sistema, asegurando que el software funcione de manera eficiente incluso bajo carga.
 
-Mantenibilidad, Escalabilidad, Flixibilidad, Rendimiento
+## Principios de Diseño de Software
 
-como saber que la aplicacion no tiene buen diesño
-Por Rigidez osea que es dificl de cambiar, Fragilidad significa que el diseño se puede romper, Inmovilidad es cuando el diseño no se puede reusar o es muy dificly Viscosidad es cuando no se puede hacer algo correcto ya que lo que hiciste no se puede cambiar
+El diseño de software no se trata solo de la creación de código funcional, sino de cómo organizarlo de manera efectiva para que sea robusto y fácil de mantener. Los principios fundamentales del diseño de software guían a los desarrolladores en la creación de sistemas bien estructurados.
 
-ahora para poder tener u buen nivel debemos tener presente los principios de diseño, en este caso es un conkjunto sde pautas que nos ayudan a evitar un mal diselño de software, un ejemplo de principios son los principiso Solid
+### Principios SOLID
 
-Los patreones de diselo son la solucion general reutilkizable qpara un problema que ocurre comunmente dentro de una contexto dado en el diseño de softaware
+**SOLID** es un acrónimo que describe cinco principios fundamentales de diseño orientado a objetos que se deben seguir para obtener un código limpio y fácil de mantener. 
 
-de alguna forma los principios de diseñño de softaware son las metas que quiero alacanzar o los objetivos que hay que alcanzar para desarrollar mientreas que los patrones son los recurso que suaremos para alczaar los objetivos
+1. **Single Responsibility Principle (SRP)**  
+   Una clase debe tener solo una responsabilidad. Cada clase debe ser responsable de una tarea específica y no debe hacer más de una cosa. Esto asegura que los cambios en un área del sistema no afecten otras partes del código.
 
+   **Ejemplo práctico:**  
+   Imagina un departamento en una empresa. Si un departamento maneja tanto la contratación como el entrenamiento, las tareas se vuelven más difíciles de gestionar. Es mejor tener un departamento específico para cada función (uno para contratación y otro para capacitación).
 
-Los principiso de idseño de softare
+2. **Open/Closed Principle (OCP)**  
+   El sistema debe estar abierto para la extensión, pero cerrado para la modificación. Esto significa que debemos poder agregar nuevas funcionalidades sin modificar el código existente.
 
-Son una serie de reglas y recomendaciones especificas que los programadores deben seguir dirante el desarrollo si quieren escribir un codigo limpio comprensible y facil de mant3ener, es en si una guia para desarrollar para tener u  cosdigo limpio, mantenible y facil de comprender
+   **Ejemplo práctico:**  
+   Si una tienda en línea inicialmente solo vende libros, pero luego decide vender ropa, el sistema debe permitir agregar esta nueva categoría sin tener que modificar las funcionalidades existentes de venta de libros.
 
-El pirncipio Solid 
-esta imagen es la deficniond e codigo facilito incluyela en el ejemplo con una descripcion
-![image](https://github.com/user-attachments/assets/0e2bee48-ed8b-4884-a892-9ba0ef83f92c) 
-en este caso usaremos solid,(haz una descripcion de cada uno de los 5 prioncipiso y con un ejemplo en texto poor favor)
+3. **Liskov Substitution Principle (LSP)**  
+   Los objetos de una clase base deben poder ser reemplazados por objetos de sus subclases sin alterar el funcionamiento del sistema.
 
+   **Ejemplo práctico:**  
+   Si tienes una clase `Empleado` y una subclase `Gerente`, deberías poder reemplazar un `Empleado` con un `Gerente` sin que eso afecte al sistema, ya que el `Gerente` debe comportarse como un `Empleado` en todo momento.
 
-Single Responsability: Debe haber una responasbilidad unica de cada clase, siempre determianr que las tareas que hace una clase son de esas clase y que no tienen  relacion con otras relaciones
+4. **Interface Segregation Principle (ISP)**  
+   Las interfaces deben ser específicas para los clientes que las implementan. No debes obligar a las clases a implementar métodos que no van a utilizar.
 
-OpenClosed: Deben ser abiertas para su extension, pero cerradas para su modifiacion
+   **Ejemplo práctico:**  
+   En una empresa, si el departamento de ventas necesita acceso a un sistema de facturación y el departamento de recursos humanos necesita acceso a un sistema de nómina, es mejor crear dos sistemas independientes, en lugar de uno solo que los obligue a interactuar con características que no necesitan.
 
-LiskovSubstitution, en si es cuando usamos una clase que tiene padre, usar el padre cuando sea algo ams util ya que es mas general y mas mutable el codigo
+5. **Dependency Inversion Principle (DIP)**  
+   Los módulos de alto nivel no deben depender de los módulos de bajo nivel. Ambos deben depender de abstracciones (como interfaces). Además, las abstracciones no deben depender de los detalles, sino los detalles de las abstracciones.
 
-InterfaceSegregation: Las clases no deben tener las repsonsabilidades especificas, no debe tener funciones que no usara
+   **Ejemplo práctico:**  
+   Si tienes un sistema de pago en línea que depende directamente de un procesador de pagos específico, este principio sugiere que deberías depender de una abstracción (una interfaz de `ProcesadorDePagos`), de modo que puedas cambiar el procesador sin afectar el sistema.
 
-DependencyInversion: 
+## Otros Principios de Diseño
 
+Además de **SOLID**, existen otros principios clave que facilitan el diseño efectivo del software:
 
+1. **Don't Repeat Yourself (DRY)**  
+   Evita la duplicación de código. Si un concepto o lógica aparece más de una vez, debe ser refactorizado para evitar la redundancia, lo que facilita el mantenimiento del sistema.
 
+2. **Keep It Simple, Stupid (KISS)**  
+   Mantén el diseño lo más simple posible. La simplicidad reduce la posibilidad de errores y hace que el sistema sea más comprensible y fácil de mantener.
 
-Listo otro principioso sson Dont Repeat Yourself o DRY
+3. **You Aren't Gonna Need It (YAGNI)**  
+   Haz solo lo que realmente es necesario. No agregues características ni funcionalidades que no se vayan a utilizar en el futuro inmediato, ya que esto solo añade complejidad innecesaria.
 
-Segun este porincipio debve evitarse la duplciadiad asi que a estoi lo llamaremosa si, esto inclemneta la doficultad y el posteriro mantemiento, no repetir codigo
+4. **Law of Demeter (LoD)**  
+   Este principio sugiere que un objeto debe conocer solo a sus amigos cercanos. Es decir, no debe depender de la estructura interna de otros objetos y debería interactuar solo con objetos directamente relacionados.
 
-Keep it simple, Stupid o KISS
+5. **Inversion of Control (IoC)**  
+   Este principio promueve la inversión del control del flujo del programa, lo que implica que no se crean las dependencias directamente, sino que se gestionan externamente, por ejemplo, usando contenedores de inversión de control.
 
-Mantenlo sencillo o sea que se mantenga el codifgo simple para minizar los errores
+6. **Composition over Inheritance**  
+   Prefiere la composición de objetos sobre la herencia, lo que permite que los sistemas sean más flexibles y reutilizables.
 
+## Principios adicionales
 
-YAGNI es hacer solo lo necesario so solo lo que le estan peiddinedo si noe s necesario no lo escribas
+- **Encapsulate what varies:**  
+  Protege las partes del sistema que son susceptibles de cambiar con frecuencia, para que estos cambios no afecten otras áreas del sistema.
 
-hacer yagni luego kiss y luego dry
+- **The Four Rules of Simple Design:**  
+  Asegúrate de que el diseño sea simple, comprensible, fácil de mantener y fácil de ampliar.
 
-mira entonces seria la forma de ver los tres anteriores apoarte de solid
-![image](https://github.com/user-attachments/assets/16952631-d67e-4991-852a-e1a768634e38)
+- **The Boy Scout Rule:**  
+  Siempre deja el código en mejor estado de lo que lo encontraste. Este principio implica que cada vez que trabajes en el código, debes mejorarlo o limpiarlo, incluso si no es parte de la tarea principal.
 
+- **Last Responsible Moment:**  
+  Toma decisiones de diseño en el último momento posible para evitar realizar suposiciones innecesarias y costosas sobre cómo debe funcionar el sistema.
 
+## Patrones de Diseño
 
-Inversion of Control (IoC)
-Law of Demeter (LoD)
-Strive for loosely coupled design between objects that interact
-Composition over inheritance
-Encapsulate what varies
-The four rules of simple design
-The boy scout rule
-Last Responsible Moment
+Los **patrones de diseño** son soluciones reutilizables a problemas comunes que surgen durante el desarrollo del software. Estos patrones son como plantillas que guían la implementación de soluciones, basadas en las mejores prácticas y experiencia acumulada. Mientras que los principios como **SOLID** establecen los objetivos a alcanzar, los patrones son las herramientas o recursos que se utilizan para lograrlos.
 
+Algunos de los patrones más conocidos son:
+- **Factory Method:** Crea objetos sin especificar la clase exacta del objeto que se creará.
+- **Singleton:** Asegura que una clase tenga una única instancia y proporciona un punto de acceso global a ella.
+- **Observer:** Permite que un objeto notifique a otros objetos sobre cambios en su estado.
+- **Decorator:** Permite agregar funcionalidades a un objeto sin modificar su estructura.
 
+## Libros recomendados
 
+1. **Clean Code** por Robert C. Martin: Este libro es fundamental para aprender buenas prácticas de codificación, cómo escribir código limpio y cómo aplicar los principios SOLID de manera efectiva.
+   
+2. **Head First Design Patterns** por Eric Freeman: Un enfoque práctico y fácil de entender para aprender patrones de diseño. Este libro es ideal para comprender cómo aplicar patrones en proyectos reales.
+
+3. **Design Patterns: Elements of Reusable Object-Oriented Software** por Erich Gamma, Richard Helm, Ralph Johnson y John Vlissides (conocidos como los "Gang of Four"): Este libro es considerado la referencia definitiva sobre patrones de diseño orientados a objetos.
+
+---
+
+### Enlaces adicionales
+
+1. [**Principios de diseño en el orden de YAGNI a KISS a DRY**]([#](https://github.com/user-attachments/assets/16952631-d67e-4991-852a-e1a768634e38))  
+   (Agrega aquí el enlace correspondiente para organizar los principios en este orden).
+
+2. ![Imagen de SOLID](https://github.com/user-attachments/assets/0e2bee48-ed8b-4884-a892-9ba0ef83f92c)  
+   (Agrega aquí el enlace a la imagen que muestra los principios SOLID).
+
+---
