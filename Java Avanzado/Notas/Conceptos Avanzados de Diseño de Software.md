@@ -112,10 +112,8 @@ Algunos de los patrones más conocidos son:
 
 ### Enlaces adicionales
 
-1. [**Principios de diseño en el orden de YAGNI a KISS a DRY**](https://github.com/user-attachments/assets/16952631-d67e-4991-852a-e1a768634e38)  
-   (Agrega aquí el enlace correspondiente para organizar los principios en este orden).
+1. ![**Principios de diseño en el orden de YAGNI a KISS a DRY**](https://github.com/user-attachments/assets/16952631-d67e-4991-852a-e1a768634e38)  
 
 2. ![Imagen de SOLID](https://github.com/user-attachments/assets/0e2bee48-ed8b-4884-a892-9ba0ef83f92c)  
-   (Agrega aquí el enlace a la imagen que muestra los principios SOLID).
 
 ---
