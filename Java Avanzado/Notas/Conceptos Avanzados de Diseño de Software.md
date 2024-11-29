@@ -117,3 +117,10 @@ Algunos de los patrones más conocidos son:
 2. ![Imagen de SOLID](https://github.com/user-attachments/assets/0e2bee48-ed8b-4884-a892-9ba0ef83f92c)  
 
 ---
+
+
+
+
+las sigueintes notas tambiend eberas agregarlas al domceunto anterior organizado pro favor siguewindo los mismo parametoresentonces habval de los patrones de diseño no hagas ejemplo de codigo soloe xplicalso los mas detallo y facil posible casi que como si fuera a un niño de 10 años porfavor
+
+
